@@ -7,6 +7,7 @@ com\TiendaLunesNoche\service\ArticulosService.class
 com\TiendaLunesNoche\service\ArticulosServiceImpl.class
 com\TiendaLunesNoche\WebConfig.class
 com\TiendaLunesNoche\service\ClienteServiceImpl.class
+com\TiendaLunesNoche\SecurityConfig.class
 com\TiendaLunesNoche\controller\IndexController.class
 com\TiendaLunesNoche\dao\CreditoDAO.class
 com\TiendaLunesNoche\domain\Cliente.class

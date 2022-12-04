@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.TiendaLunes.TiendaLunes.TiendaLunesApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.357 s <<< FAILURE! - in com.TiendaLunes.TiendaLunes.TiendaLunesApplicationTests
-com.TiendaLunes.TiendaLunes.TiendaLunesApplicationTests  Time elapsed: 0.356 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.381 s <<< FAILURE! - in com.TiendaLunes.TiendaLunes.TiendaLunesApplicationTests
+com.TiendaLunes.TiendaLunes.TiendaLunesApplicationTests  Time elapsed: 0.379 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "java.lang.Class.getName()" because "found" is null
 
