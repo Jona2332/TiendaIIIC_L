@@ -5,10 +5,8 @@
  */
 package com.TiendaLunesNoche.service;
 
-import com.TiendaLunesNoche.dao.ClienteDAO;
-import com.TiendaLunesNoche.dao.CreditoDAO;
-import com.TiendaLunesNoche.domain.Cliente;
-import com.TiendaLunesNoche.domain.Credito;
+import com.TiendaLunesNoche.dao.ArticuloDAO;
+import com.TiendaLunesNoche.domain.Articulo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,38 +17,36 @@ import org.springframework.transaction.annotation.Transactional;
  * @author jonha
  */
 @Service
-public class ClienteServiceImpl implements ClienteService{
+public class ArticulosServiceImpl implements ArticulosService{
 
     @Autowired
-    private ClienteDAO clienteDao;
-    @Autowired
-    private CreditoDAO creditoDao;
+    private ArticuloDAO clienteDao;
+    
     @Override
     @Transactional(readOnly = true)
-    public List<Cliente> getClientes() {
-        return (List<Cliente>) clienteDao.findAll();
+    public List<Articulo> getArticulos(boolean activos) {
+        var lista = (List<Articulo>) clienteDao.findAll();
+        if(activos){lista.removeIf(e -> !e.isActivo());}
+        return lista;
     }
+    
 
     @Override
     @Transactional
-    public void save(Cliente cliente) {
-        Credito credito = cliente.getCredito();
-        credito=creditoDao.save(credito);
-        cliente.setCredito(credito);
+    public void save(Articulo cliente) {
         clienteDao.save(cliente);
-        
     }
 
     @Override
     @Transactional
-    public void delete(Cliente cliente) {
+    public void delete(Articulo cliente) {
         clienteDao.delete(cliente);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Cliente getCliente(Cliente cliente) {
-       return clienteDao.findById(cliente.getIdCliente()).orElse(null);
+    public Articulo getArticulo(Articulo cliente) {
+       return clienteDao.findById(cliente.getIdArticulo()).orElse(null);
     }
 
     
