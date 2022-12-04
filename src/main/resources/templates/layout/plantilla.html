@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
-<html xmlns:th="htttp://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8"/>
        </head>
     <body>
         <header th:fragment="header" class="header">
-            <nav class="nav">
+            <nav class="nav" sec:authorize="hasRole('ROLE_VENDEDOR')">
             <a th:href="@{/}" class="logo nav-link">TechShop</a>
             <ul class="nav-menu">
                 <li class="nav-menu-item">
@@ -23,15 +24,22 @@
                     <a class = "nav-menu-link nav-link" th:href="@{/articulo/listado}"
                        th:text="#{plantilla.articulos}">Articulos</a>
                 </li>
+                <li class="nav-menu-item" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a class = "nav-menu-link nav-link" th:href="@{/admin/listado}"
+                       th:text="#{plantilla.admin}">Admin</a>
+                </li>
 
                 
             </ul>   
         </nav><!-- Menu -->
         </header>
         <footer th:fragment="footer" class="footer">
-            <p>&copy;[[#{plantilla.derechos}]]
+            <div>&copy;[[#{plantilla.derechos}]]
             <a th:href="@{/(lang=es)}"> ES </a>
-            <a th:href="@{/(lang=en)}"> EN </a></p>
+            <a th:href="@{/(lang=en)}"> EN </a>
+            <form method="POST" th:action="@{/logout}" style="display: inline">                    
+                <a href="#" onclick="this.parentNode.submit();">Logout</a>
+            </form><!-- comment --></div>
         </footer> 
     </body>
 </html>
