@@ -4,30 +4,79 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="es">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Esta pagina contiene etiquetas del tipo html 5"><!-- comment -->
+        <meta name="keywords" content ="html5, css3, web">
         <link href="CSS/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header class="encabezado">
-            <nav>
-                <a>TechShop</a>
-                
-            </nav>
+        <header id="encabezado">
+            <h1>TechShop</h1> 
         </header>
-        <form method="POST">
-            <label> Nombre </label>
-            <input placeholder="nombre" type="text" name="nombre"></<input>
-            <br><!-- comment -->
-            <label> Apellido </label>
-            <input placeholder="appelido" type="text" name="apellido"></<input>
-            <br><!-- comment -->
-            <label> Correo </label>
-            <input placeholder="correo@correo.com" type="text" name="correo"></<input>
-            <br><!-- comment --><input type="submit" value="Registrar" />
-        </form>
+        <nav id="menu">
+            <a href='index.html'>Back</a>
+            <a href='index.html'>Home</a>
+            <a href='index.html'>Back</a><br>
+        </nav><!-- Menu -->
+        <aside id="barraLateral">
+            <h2>Productos más vendidos</h2>
+            
+        </aside>
+        <section id="contenido">
+            <article>
+                <header>Portatil XRT 5000</header>
+                <p>Portatil ultima generacion bla bla</p>
+                <footer>Agregar al carrito</footer>
+                <figure>
+                    <img src='Images/Laptop.jpg' alt='Desktop XRT'/> 
+                </figure>
+            </article>
+            <article>
+                <header>Portatil XRT 5000</header>
+                <p>Portatil ultima generacion bla bla</p>
+                <footer>Agregar al carrito</footer>
+                <figure>
+                    <img src='Images/Laptop.jpg' alt='aLIENWARE'/> 
+                </figure>
+            </article>
+            <article>
+                <header>Portatil XRT 5000</header>
+                <p>Portatil ultima generacion bla bla</p>
+                <footer>Agregar al carrito</footer>
+                <figure>
+                    <img src='Images/Laptop.jpg' alt=''/> 
+                    <figcaption>Más vendido</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Resumen de lineas</header>
+                <p>Portatil ultima generacion bla bla</p>
+                <table border="1">
+                    <thead>
+                        <tr id="encabezadoTabla">
+                            <th>Codigos</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen">
+                        <tr>
+                            <td>1</td>
+                            <td>Portatil ultima generacion bla bla</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Portatil ultima generacion bla bla</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+        </section>
+        <footer id="piePag">Derechos reservados Jonathan &COPY; 2022</footer>
+       
     </body>
 </html>
