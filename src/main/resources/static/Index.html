@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -12,16 +13,20 @@ and open the template in the editor.
         <meta name="description" content="Esta pagina contiene etiquetas del tipo html 5"><!-- comment -->
         <meta name="keywords" content ="html5, css3, web">
         <link href="CSS/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header id="encabezado">
-            <h1>TechShop</h1> 
-        </header>
-        <nav id="menu">
-            <a href='index.html'>Back</a>
-            <a href='index.html'>Home</a>
-            <a href='index.html'>Back</a><br>
+        <header class="header">
+            <nav class="nav">
+            <a href='index.html' class="logo nav-link">TechShop</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class = "nav-menu-link nav-link" href='Videos.html'>&LeftTriangleBar;</a></li>
+                <li class="nav-menu-item"><a class = "nav-menu-link nav-link" href='Audios.html'>&RightTriangleBar;</a></li>
+                
+            </ul>   
         </nav><!-- Menu -->
+        </header>
+        
         <aside id="barraLateral">
             <h2>Productos más vendidos</h2>
             

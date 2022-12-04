@@ -1,81 +1,62 @@
-#encabezado{
-    position:absolute;
+*{
+    
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+    
+}
+
+.header {
+    
+    background-color: #076AF0;
+    height: 80px;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 8%;
     width: 100%;
-    background-color: #496D8D;
+    
+}
+
+.nav{
+    
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+    
+}
+.nav-link{
     color: white;
+    text-decoration: none;
 }
-#encabezado h1{
+.logo{
     
-    display: inline
-    
-}
-#menu {
-    
-    position: absolute;
-    top: 8%;
-    left: 0;
-    height: 4%;
-    width: 100%;
-    background-color: black;
-    color: white;
-}
-#menu a {
-    
-    background-color: red;
-    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
     
 }
-#menu a:hover {
-    
-    background-color: green;
-    color: white;
-    
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
 }
-#barraLateral{
-    position: absolute;
-    top: 12%;
-    left: 0;
-    height: 81%;
-    width: 20%;
-    background-color: #00FFA0;
-    padding: 10px;
-    overflow: auto;
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    width: max-content;
 }
-#contenido{
-    position: absolute;
-    top: 12%;
-    left: 20%;
-    height: 81%;
-    width: 80%;
-    background-color: #7901A0;
-    padding: 10px;
-    overflow: auto;
+.nav-menu-link:hover{
+    background-color: #024070;
+    transition: 0.5s;
 }
-#piePag{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4%;
-    width: 100%;
-    background-color: #AABB00;
-    text-align: center;
-    overflow: auto;
-}
-#encabezadoTabla{
-    
-   background-color: blue; 
-   color: white;
-}
-#tablaResumen tr:nth-child(odd){
-   background-color: coral; 
-   color: blue;   
-    
-}
-#tablaResumen tr:nth-child(even){
-   background-color: white; 
-   color: black;   
-    
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 4px;
 }
