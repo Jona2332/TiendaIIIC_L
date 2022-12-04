@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="htttp://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <link href="/CSS/menu.css" rel="stylesheet" type="text/css"/>
+       </head>
+    <body>
+
+        <header th:replace="layout/plantilla :: header"/>
+        <div class="contenido">
+        <h2 th:text="#{index.titulo}">Nuestros Arituclos</h2>
+        
+        <div th:if="${articulos != null and !articulos.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th th:text="#{index.descripcion}">Descripcion</th>
+                    <th th:text="#{index.precio}">Precio</th>
+                    
+                    <th th:text="#{index.comprar}">Comprar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="articulo : ${articulos}">
+                    <td th:text="${articulo.descripcion}"></td>
+                    <td th:text="${articulo.precio}"></td>
+                    
+                     <td><a th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">Agregar al Carrito</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div th:if="${articulos == null or !articulos.empty}">
+            
+        </div>
+                </div>
+
+        <footer th:replace="layout/plantilla :: footer"/>
+
+    </body>
+</html>
