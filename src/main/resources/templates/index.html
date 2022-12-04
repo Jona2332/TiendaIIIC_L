@@ -30,6 +30,7 @@
                     <td th:text="${articulo.precio}"></td>
                     
                      <td><a th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">Agregar al Carrito</a></td>
+                     <img th:src="@{${articulo.rutaImagen}}" width="120"/>
                 </tr>
             </tbody>
         </table>
