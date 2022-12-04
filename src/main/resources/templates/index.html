@@ -7,6 +7,8 @@
        </head>
     <body>
         <h1>Listado de Clientes</h1>
+        <a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
+        <div th:if="${clientes != null and !clientes.empty}">
         <table border="1">
             <thead>
                 <tr>
@@ -25,6 +27,9 @@
                 </tr>
             </tbody>
         </table>
-
+        </div>
+        <div th:if="${clientes == null or !clientes.empty}">
+            
+        </div>
     </body>
 </html>
